@@ -1,0 +1,1 @@
+# nuxt_crud_demo
