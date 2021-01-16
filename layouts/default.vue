@@ -72,8 +72,8 @@ html {
   line-height: 160px;
 }
 
-body > .el-container {
-  margin-bottom: 40px;
+.el-container {
+  height: 91vh;
 }
 
 .el-container:nth-child(5) .el-aside,
@@ -83,10 +83,6 @@ body > .el-container {
 
 .el-container:nth-child(7) .el-aside {
   line-height: 320px;
-}
-
-.el-container {
-  height: 92vh;
 }
 </style>
 

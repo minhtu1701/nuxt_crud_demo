@@ -8,19 +8,19 @@
       class="demo-ruleForm"
     >
       <el-form-item label="Name" prop="name">
-        <el-input v-model="ruleForm.name" placeholder=""></el-input>
+        <el-input v-model="ruleForm.name"></el-input>
       </el-form-item>
       <el-form-item label="State" prop="state">
-        <el-input v-model="ruleForm.state" placeholder=""></el-input>
+        <el-input v-model="ruleForm.state"></el-input>
       </el-form-item>
       <el-form-item label="City" prop="city">
-        <el-input v-model="ruleForm.city" placeholder=""></el-input>
+        <el-input v-model="ruleForm.city"></el-input>
       </el-form-item>
       <el-form-item label="Address" prop="address">
-        <el-input v-model="ruleForm.address" placeholder=""></el-input>
+        <el-input v-model="ruleForm.address"></el-input>
       </el-form-item>
       <el-form-item label="Phone" prop="phone">
-        <el-input v-model="ruleForm.phone" placeholder=""></el-input>
+        <el-input v-model="ruleForm.phone"></el-input>
       </el-form-item>
       <el-form-item>
         <el-button type="primary" v-on:click="updateEmployee"
@@ -36,7 +36,6 @@
 import { mapState, mapGetters, mapActions } from "vuex";
 
 export default {
-  name: "EmployeeForm",
   data() {
     return {
       ruleForm: {
@@ -105,16 +104,13 @@ export default {
   },
 
   computed: {
-    ...mapState("employee", {
-      dataLists: (state) => state.lists,
-    }),
-
     detail() {
       return this.$store.getters["employee/getDetailById"](
         this.$route.params.id
       );
     },
   },
+
   // watching variable on component changed
   watch: {
     detail: {
@@ -124,10 +120,6 @@ export default {
       },
       immediate: true,
     },
-    // detail(newValue, oldValue) {
-    //   console.log(newValue, oldValue);
-    //   this.ruleForm = { ...newValue };
-    // },
   },
 };
 //   edditEmployee(state, updatedEmployee, id) {

@@ -100,8 +100,8 @@ export const mutations = {
     // this.$router.push("/employees");
   },
 
-  removeEmployee(state, index) {
-    state.lists = state.lists.filter(employee => employee.id != index);
+  removeEmployee(state, id) {
+    state.lists = state.lists.filter(employee => employee.id != id);
   },
 
   updateEmployee(state, updatedEmployee) {

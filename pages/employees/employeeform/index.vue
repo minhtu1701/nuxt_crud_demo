@@ -104,6 +104,5 @@ export default {
   max-width: 50%;
   align-items: center;
   margin: 25px auto;
-  height: 100%;
 }
 </style>

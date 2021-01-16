@@ -66,9 +66,6 @@ export default {
           });
         });
     },
-    editEmployee(employee) {
-      console.log(dataLists);
-    },
   },
   computed: {
     ...mapState("employee", {

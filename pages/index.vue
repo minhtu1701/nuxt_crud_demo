@@ -8,14 +8,6 @@
 </template>
 
 <script>
-import { mapState } from "vuex";
-export default {
-  computed: {
-    ...mapState({
-      localData: (state) => state.lists.tableData,
-    }),
-  },
-};
 </script>
 
 <style>

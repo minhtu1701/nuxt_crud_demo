@@ -1,10 +1,7 @@
 <template>
   <el-col class="sideBar" :span="24">
     <el-menu
-      default-active="2"
       class="el-menu-vertical-demo"
-      @open="handleOpen"
-      @close="handleClose"
       background-color="#545c64"
       text-color="#fff"
       active-text-color="#ffd04b"
@@ -21,23 +18,19 @@
           >Add new Employee</span
         >
       </el-menu-item>
+      <el-menu-item index="3">
+        <template slot="title">
+          <i class="el-icon-location"></i>
+          <span @click="$router.push('/article')"> Article Management</span>
+        </template>
+      </el-menu-item>
+      <el-menu-item index="4">
+        <i class="el-icon-setting"></i>
+        <span @click="$router.push('/article/articleform')"
+          >Add new Article</span
+        >
+      </el-menu-item>
     </el-menu>
   </el-col>
 </template>
 
-
-<script>
-export default {
-  methods: {
-    handleOpen(key, keyPath) {
-      console.log(key, keyPath);
-    },
-    handleClose(key, keyPath) {
-      console.log(key, keyPath);
-    },
-  },
-};
-</script>
-
-<style scoped>
-</style>

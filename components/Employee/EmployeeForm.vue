@@ -66,6 +66,7 @@ export default {
       },
     };
   },
+
   methods: {
     addEmployee() {
       this.$confirm(
@@ -91,6 +92,7 @@ export default {
           });
         });
     },
+
     handleCancelClick() {
       this.ruleForm.name = "";
       this.ruleForm.state = "";
