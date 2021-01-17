@@ -97,7 +97,6 @@ export const mutations = {
     const id = lastId + 1;
     const newEmployee = { ...employee, id };
     state.lists.push(newEmployee);
-    // this.$router.push("/employees");
   },
 
   removeEmployee(state, id) {
@@ -108,5 +107,6 @@ export const mutations = {
     state.lists = state.lists.map(employee =>
       employee.id === updatedEmployee.id ? updatedEmployee : employee
     );
+    this.$router.push("/employees/");
   }
 };

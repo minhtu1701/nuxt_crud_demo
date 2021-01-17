@@ -52,7 +52,7 @@ export default {
         }
       )
         .then(() => {
-          this.$store.commit("article/removeArticle", id);
+          this.$store.dispatch("article/removeArticle", id);
           this.$message({
             type: "success",
             message: "Delete completed",
@@ -64,10 +64,6 @@ export default {
             message: "Delete canceled",
           });
         });
-    },
-
-    editEmployee(employee) {
-      console.log(dataLists);
     },
   },
 };

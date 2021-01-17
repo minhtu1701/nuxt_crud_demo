@@ -97,12 +97,11 @@ export default {
         }
       )
         .then(() => {
-          this.$store.commit("article/updateArticle", this.ruleForm);
+          this.$store.dispatch("article/updateArticle", this.ruleForm);
           this.$message({
             type: "success",
             message: "Update completed",
           });
-          this.$router.push("/article/");
         })
         .catch(() => {
           this.$message({

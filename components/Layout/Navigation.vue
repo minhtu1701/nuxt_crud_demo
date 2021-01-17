@@ -12,11 +12,16 @@
     <el-menu-item @click="$router.push('/')" index="2">About</el-menu-item>
 
     <el-submenu index="3">
-      <template slot="title">Contact</template>
+      <template slot="title">Orders</template>
       <el-menu-item @click="$router.push('/employees')" index="2-1"
-        >List</el-menu-item
+        >Feature 1</el-menu-item
       >
-      <el-menu-item disabled index="2-2">Edit</el-menu-item>
+      <el-menu-item @click="$router.push('/employees')" index="2-2"
+        >Feature 2</el-menu-item
+      >
+      <el-menu-item @click="$router.push('/employees')" index="2-3"
+        >Feature 3</el-menu-item
+      >
     </el-submenu>
   </el-menu>
 </template>
