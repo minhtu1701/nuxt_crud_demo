@@ -115,18 +115,12 @@ export default {
   watch: {
     detail: {
       handler() {
-        console.log("detail has changed", this.detail);
         this.ruleForm = { ...this.detail };
       },
       immediate: true,
     },
   },
 };
-//   edditEmployee(state, updatedEmployee, id) {
-//     state.lists = state.lists.map(employee =>
-//       employee.id === id ? updatedEmployee : employee
-//     );
-//   }
 </script>
 
 <style scoped>

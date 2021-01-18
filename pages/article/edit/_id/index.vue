@@ -65,26 +65,14 @@ export default {
       },
     };
   },
-  computed: {
-    detail() {
-      return this.$store.getters["article/getDetailById"](
-        this.$route.params.id
-      );
-    },
+
+  async asyncData({ params, $axios }) {
+    const ruleForm = await $axios.$get(
+      `https://60011cb008587400174da653.mockapi.io/api/v1/articles/${params.id}`
+    );
+    return { ruleForm };
   },
-  watch: {
-    detail: {
-      handler() {
-        console.log("detail has changed", this.detail);
-        this.ruleForm = { ...this.detail };
-      },
-      immediate: true,
-    },
-    // detail(newValue, oldValue) {
-    //   console.log(newValue, oldValue);
-    //   this.ruleForm = { ...newValue };
-    // },
-  },
+
   methods: {
     updateArticle() {
       this.$confirm(
@@ -102,6 +90,7 @@ export default {
             type: "success",
             message: "Update completed",
           });
+          this.$router.push("/article/");
         })
         .catch(() => {
           this.$message({

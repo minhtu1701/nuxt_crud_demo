@@ -59,6 +59,7 @@ export default {
       },
     };
   },
+
   methods: {
     addArticle(ruleForm) {
       this.$refs[ruleForm].validate((rules) => {
